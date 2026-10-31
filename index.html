@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body lang="pt-BR">
 
     <!-- Top Emergency Bar -->
     <div class="top-emergency-bar">
@@ -40,8 +40,8 @@
                 <ul>
                     <li><a href="#home" class="nav-link">Início</a></li>
                     <li><a href="#especialidades" class="nav-link">Especialidades</a></li>
-                    <li><a href="#localizacao" class="nav-link">Localização & Contato</a></li>
                     <li><a href="#faq" class="nav-link">Dúvidas</a></li>
+                    <li><a href="#localizacao" class="nav-link">Localização & Contato</a></li>
                 </ul>
             </nav>
 
@@ -233,7 +233,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="preferredDate">Data Preferida</label>
-                                <input type="date" id="preferredDate" required>
+                                <input type="date" id="preferredDate" lang="pt-BR" required>
                             </div>
                         </div>
 
@@ -257,36 +257,38 @@
         </div>
     </section>
 
-    <!-- Clinic Info Before Map -->
-    <section class="clinic-details-section">
+    <!-- Medical FAQ -->
+    <section id="faq" class="faq-section">
         <div class="container">
             <div class="section-header text-center">
-                <span class="section-subtitle">Informações Úteis</span>
-                <h2>Estrutura e Atendimento ao Paciente</h2>
-                <p>Tudo o que você precisa saber antes de se dirigir ao nosso hospital veterinário.</p>
+                <span class="section-subtitle">Dúvidas Frequentes</span>
+                <h2>Informações Hospitalares</h2>
             </div>
-            
-            <div class="details-grid">
-                <div class="detail-card">
-                    <div class="detail-icon">🅿️</div>
-                    <h3>Estacionamento Gratuito</h3>
-                    <p>Vagas exclusivas e seguras para tutores na entrada principal, facilitando o desembarque de pets.</p>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <span>Como funciona o atendimento de Emergência 24 Horas?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>O atendimento de emergência funciona em regime de plantão contínuo com triagem imediata.</p>
+                    </div>
                 </div>
-                <div class="detail-card">
-                    <div class="detail-icon">🕒</div>
-                    <h3>Horário de Visitas à UTI</h3>
-                    <p>As visitas ocorrem em horários específicos definidos pelo médico intensivista responsável.</p>
-                </div>
-                <div class="detail-card">
-                    <div class="detail-icon">💳</div>
-                    <h3>Formas de Pagamento</h3>
-                    <p>Aceitamos cartões de crédito, débito e pagamentos instantâneos via PIX.</p>
+
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <span>É necessário jejum para exames de imagem e sangue?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Para ultrassom, recomenda-se jejum alimentar de 8 horas e hídrico de 2 horas.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Split Section: Clean Contact Info & Map (Side-by-Side) -->
+    <!-- Split Section: Clean Contact Info & Map (Side-by-Side at the Very End) -->
     <section id="localizacao" class="location-split-section">
         <div class="container">
             <div class="section-header text-center">
@@ -351,37 +353,6 @@
         </div>
     </section>
 
-    <!-- Medical FAQ -->
-    <section id="faq" class="faq-section">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-subtitle">Dúvidas Frequentes</span>
-                <h2>Informações Hospitalares</h2>
-            </div>
-            <div class="faq-accordion">
-                <div class="faq-item">
-                    <button class="faq-header">
-                        <span>Como funciona o atendimento de Emergência 24 Horas?</span>
-                        <span class="icon">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <p>O atendimento de emergência funciona em regime de plantão contínuo com triagem imediata.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-header">
-                        <span>É necessário jejum para exames de imagem e sangue?</span>
-                        <span class="icon">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <p>Para ultrassom, recomenda-se jejum alimentar de 8 horas e hídrico de 2 horas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Medical Footer -->
     <footer class="footer">
         <div class="container footer-grid">
@@ -394,6 +365,50 @@
                 <div class="legal-badge">
                     <span>CRMV-PR 10482 / Hospital Registrado</span>
                 </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Unidade Hospitalar</h4>
+                <p>📍 Av. Paranaense, 1500 - Centro</p>
+                <p>Toledo - PR | Brasil</p>
+                <p>📞 Plantão 24h: (45) 99999-9999</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Especialidades</h4>
+                <ul>
+                    <li>Cardiologia & Eletrocardiograma</li>
+                    <li>Ortopedia & Traumatologia</li>
+                    <li>Oncologia Veterinária</li>
+                    <li>Cirurgia Geral & Anestesia</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom-social">
+            <div class="container social-bottom-content">
+                <p>© 2026 AQUARIPET Hospital Veterinário 24h. Todos os direitos reservados.</p>
+                <div class="bottom-social-icons">
+                    <a href="https://instagram.com/aquaripet" target="_blank" title="Instagram" class="bottom-icon">
+                        <svg class="social-svg-sm" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://facebook.com/aquaripet" target="_blank" title="Facebook" class="bottom-icon">
+                        <svg class="social-svg-sm" viewBox="0 0 24 24"><path fill="currentColor" d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.37 14.5 5 15.5 5H18V0h-3.808C10.59 0 9 1.581 9 4.615V8z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Emergency WhatsApp -->
+    <a href="https://wa.me/5545999999999?text=Emergência%20Veterinária" class="float-emergency-btn" target="_blank" title="Plantão de Emergência 24h">
+        <span>⚡ Plantão 24h</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
             </div>
 
             <div class="footer-col">
