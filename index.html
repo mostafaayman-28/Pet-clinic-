@@ -19,7 +19,7 @@
                 <span>🚨 PLANTÃO DE EMERGÊNCIA <strong>24 HORAS</strong></span>
             </div>
             <div class="emergency-contact">
-                <span>UTI & Pronto Atendimento</span>
+                <span>Pronto Atendimento</span>
                 <a href="tel:5545999999999" class="phone-link">📞 (45) 99999-9999</a>
             </div>
         </div>
@@ -41,16 +41,15 @@
                     <li><a href="#home" class="nav-link">Início</a></li>
                     <li><a href="#especialidades" class="nav-link">Especialidades</a></li>
                     <li><a href="#estrutura" class="nav-link">Estrutura</a></li>
-                    <li><a href="#corpo-medico" class="nav-link">Corpo Médico</a></li>
                     <li><a href="#faq" class="nav-link">Dúvidas</a></li>
                 </ul>
             </nav>
 
             <div class="nav-actions">
                 <button id="themeToggleBtn" class="theme-toggle-btn" title="Alternar Modo Claro/Escuro">🌙</button>
-                <a href="#agendamento" class="btn btn-primary desktop-cta">Agendar Consulta</a>
+                <a href="#agendamento" class="btn btn-primary desktop-only">Agendar</a>
                 <!-- Mobile Hamburger Button -->
-                <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -64,10 +63,10 @@
         <div class="container hero-grid">
             <div class="hero-text">
                 <div class="clinical-badge">
-                    <span>✨ Centro de Alta Complexidade Veterinária</span>
+                    <span>✨ Centro de Alta Complexidade</span>
                 </div>
-                <h1>Medicina Veterinária Avançada e Atendimento Hospitalar 24h</h1>
-                <p>Estrutura hospitalar de ponta, diagnósticos por imagem em tempo real, UTI equipada e equipe médica especializada para cuidar da vida do seu paciente com máxima precisão.</p>
+                <h1>Medicina Veterinária Avançada e Atendimento 24h</h1>
+                <p>Estrutura hospitalar de ponta, diagnósticos por imagem em tempo real, UTI equipada e equipe médica especializada para cuidar do seu pet.</p>
                 
                 <div class="hero-actions">
                     <a href="#agendamento" class="btn btn-primary btn-lg">Agendar Consulta</a>
@@ -88,7 +87,7 @@
                     </div>
                     <div class="metric-divider"></div>
                     <div class="metric-item">
-                        <strong class="number">CRMV-PR</strong>
+                        <strong class="number">CRMV</strong>
                         <span class="label">Certificada</span>
                     </div>
                 </div>
@@ -105,7 +104,7 @@
                         <p>Anestesistas, Cirurgiões e Intensivistas de prontidão para casos de alta complexidade.</p>
                         <div class="badge-list">
                             <span class="tag">Raio-X Digital</span>
-                            <span class="tag">Ultrassom Doppler</span>
+                            <span class="tag">Ultrassom</span>
                             <span class="tag">Laboratório 24h</span>
                         </div>
                     </div>
@@ -120,11 +119,10 @@
             <div class="section-header">
                 <span class="section-subtitle">Corpo Clínico & Especialidades</span>
                 <h2>Cuidados Médicos Especializados</h2>
-                <p>Atendimento focado em diagnósticos precisos e tratamentos fundamentados na literatura científica internacional.</p>
+                <p>Atendimento focado em diagnósticos precisos e tratamentos fundamentados na literatura científica.</p>
             </div>
 
             <div class="specialties-grid">
-                
                 <div class="spec-card">
                     <div class="spec-icon">🫀</div>
                     <h3>Cardiologia Veterinária</h3>
@@ -166,7 +164,6 @@
                     <p>Unidade de terapia intensiva com oxigenoterapia, monitoramento contínuo e bombas de infusão.</p>
                     <button class="btn-select-spec" data-spec="Internamento e UTI 24h">Solicitar Consulta →</button>
                 </div>
-
             </div>
         </div>
     </section>
@@ -178,11 +175,11 @@
                 <div class="booking-text">
                     <span class="section-subtitle">Agendamento & Triagem</span>
                     <h2>Agende a Consulta do seu Paciente</h2>
-                    <p>Preencha os dados do paciente para direcionarmos ao especialista adequado. Em caso de emergência imediata, contate diretamente nosso plantão.</p>
+                    <p>Preencha os dados do paciente para direcionarmos ao especialista adequado.</p>
 
                     <div class="info-box-clinical">
                         <h4>ℹ️ Orientação ao Tutor:</h4>
-                        <p>Traga exames prévios, carteira de vacinação e histórico de medicamentos em uso na data da consulta.</p>
+                        <p>Traga exames prévios, carteira de vacinação e histórico de medicamentos na consulta.</p>
                     </div>
                 </div>
 
@@ -190,7 +187,7 @@
                     <form id="clinicalBookingForm">
                         <div class="form-group">
                             <label for="ownerName">Nome Completo do Tutor (a)</label>
-                            <input type="text" id="ownerName" placeholder="Ex: Dr. Roberto Alencar" required>
+                            <input type="text" id="ownerName" placeholder="Ex: Roberto Alencar" required>
                         </div>
 
                         <div class="form-row">
@@ -211,7 +208,7 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="petName">Nome do Paciente</label>
-                                <input type="text" id="petName" placeholder="Ex: Thor, Mia" required>
+                                <input type="text" id="petName" placeholder="Ex: Thor" required>
                             </div>
                             <div class="form-group">
                                 <label for="specialty">Especialidade Médica</label>
@@ -221,8 +218,6 @@
                                     <option value="Ortopedia e Traumatologia">Ortopedia e Traumatologia</option>
                                     <option value="Diagnóstico por Imagem">Diagnóstico por Imagem</option>
                                     <option value="Cirurgia Geral e Avançada">Cirurgia Geral e Avançada</option>
-                                    <option value="Dermatologia Veterinária">Dermatologia Veterinária</option>
-                                    <option value="Oncologia Veterinária">Oncologia Veterinária</option>
                                 </select>
                             </div>
                         </div>
@@ -248,8 +243,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="clinicalNotes">Sintomas ou Histórico Clínico (Opcional)</label>
-                            <textarea id="clinicalNotes" rows="3" placeholder="Descreva brevemente o motivo da consulta..."></textarea>
+                            <label for="clinicalNotes">Sintomas ou Histórico (Opcional)</label>
+                            <textarea id="clinicalNotes" rows="3" placeholder="Descreva brevemente..."></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-submit-clinical">
@@ -276,7 +271,7 @@
                         <span class="icon">+</span>
                     </button>
                     <div class="faq-content">
-                        <p>O atendimento de emergência funciona em regime de plantão presencial contínuo. Pacientes graves passam por triagem médica imediata e são direcionados ao pronto atendimento ou UTI.</p>
+                        <p>O atendimento de emergência funciona em regime de plantão contínuo com triagem imediata.</p>
                     </div>
                 </div>
 
@@ -286,17 +281,7 @@
                         <span class="icon">+</span>
                     </button>
                     <div class="faq-content">
-                        <p>Para ultrassonografia abdominal, recomenda-se jejum alimentar de 8 horas e hídrico de 2 horas. Para exames laboratoriais de rotina, o jejum médio recomendado é de 6 a 8 horas.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-header">
-                        <span>Como é realizado o acompanhamento em casos cirúrgicos?</span>
-                        <span class="icon">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <p>Todos os procedimentos cirúrgicos possuem acompanhamento exclusivo por médico veterinário anestesista dedicado, utilizando anestesia inalatória e monitorização multiparamétrica avançada.</p>
+                        <p>Para ultrassom, recomenda-se jejum alimentar de 8 horas e hídrico de 2 horas.</p>
                     </div>
                 </div>
             </div>
@@ -311,7 +296,7 @@
                     <span class="logo-icon">🏥</span>
                     <span class="brand-name">AQUARIPET</span>
                 </div>
-                <p>Hospital Veterinário & Centro Clínico Especializado de Alta Complexidade. Responsabilidade técnica e dedicação à vida animal.</p>
+                <p>Hospital Veterinário & Centro Clínico Especializado de Alta Complexidade.</p>
                 <div class="legal-badge">
                     <span>CRMV-PR 10482 / Hospital Registrado</span>
                 </div>
