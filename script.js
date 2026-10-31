@@ -1,5 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    // 0. Dark / Light Mode Toggle
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const bodyElement = document.body;
+
+    // Check for saved user preference in localStorage
+    const savedTheme = localStorage.getItem('aquaripet_theme');
+    if (savedTheme === 'light') {
+        bodyElement.classList.add('light-mode');
+        if (themeToggleBtn) themeToggleBtn.textContent = '☀️';
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            bodyElement.classList.toggle('light-mode');
+            
+            if (bodyElement.classList.contains('light-mode')) {
+                localStorage.setItem('aquaripet_theme', 'light');
+                themeToggleBtn.textContent = '☀️';
+            } else {
+                localStorage.setItem('aquaripet_theme', 'dark');
+                themeToggleBtn.textContent = '🌙';
+            }
+        });
+    }
+
     // 1. Phone Mask format for Brazil (45) 9XXXX-XXXX
     const phoneInput = document.getElementById('phone');
     if (phoneInput) {
