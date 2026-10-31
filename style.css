@@ -520,26 +520,131 @@ body.light-mode .navbar {
     margin-top: 4px;
 }
 
-/* Interactive Free Map Section Style */
-.map-section {
+/* Split Section (50% Contact Info & 50% Map) */
+.location-split-section {
     padding: 60px 0;
     background-color: var(--bg-surface);
 }
 
-.map-container {
-    max-width: 1000px;
-    margin: 30px auto 0;
+.split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+    margin-top: 30px;
+}
+
+.split-info-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.split-info-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.info-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.contact-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.contact-list .icon {
+    font-size: 1.2rem;
+}
+
+.contact-list strong {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+}
+
+.contact-list p, .contact-list a {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    color: var(--primary-cyan);
+}
+
+.social-links-box {
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 16px;
+}
+
+.social-links-box strong {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-btn.instagram {
+    background: rgba(225, 48, 108, 0.15);
+    color: #e1306c;
+    border: 1px solid rgba(225, 48, 108, 0.3);
+}
+
+.social-btn.facebook {
+    background: rgba(24, 119, 242, 0.15);
+    color: #1877f2;
+    border: 1px solid rgba(24, 119, 242, 0.3);
+}
+
+.social-btn:hover {
+    filter: brightness(1.2);
+}
+
+.split-map-box {
     border-radius: var(--radius-lg);
     overflow: hidden;
     border: 1px solid var(--border-subtle);
+    min-height: 400px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* تكييف الخريطة لتتناسب مع الوضع الليلي والنهاري بصرياً */
-body.light-mode .map-container iframe {
+body.light-mode .split-map-box iframe {
     filter: none;
 }
-body:not(.light-mode) .map-container iframe {
+body:not(.light-mode) .split-map-box iframe {
     filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
 
@@ -592,7 +697,7 @@ body:not(.light-mode) .map-container iframe {
     display: block;
 }
 
-/* Footer */
+/* Footer & Bottom Social Icons */
 .footer {
     background: var(--bg-dark);
     border-top: 1px solid var(--border-subtle);
@@ -627,11 +732,43 @@ body:not(.light-mode) .map-container iframe {
     color: var(--primary-cyan);
 }
 
-.footer-bottom {
-    padding: 16px 0;
+.footer-bottom-social {
+    padding: 20px 0;
     border-top: 1px solid var(--border-subtle);
-    font-size: 0.75rem;
-    text-align: center;
+    font-size: 0.8rem;
+}
+
+.social-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.bottom-social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.bottom-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 50%;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.bottom-icon:hover {
+    border-color: var(--primary-cyan);
+    transform: scale(1.1);
 }
 
 .float-emergency-btn {
@@ -651,7 +788,7 @@ body:not(.light-mode) .map-container iframe {
 
 /* Responsive Mobile Layout */
 @media (max-width: 992px) {
-    .hero-grid, .booking-grid, .footer-grid {
+    .hero-grid, .booking-grid, .footer-grid, .split-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
@@ -672,20 +809,28 @@ body:not(.light-mode) .map-container iframe {
         display: flex !important;
     }
 
+    /* قائمة الموبايل أصبحت تأخذ نصف الشاشة تقريباً (أو ارتفاع تلقائي مناسب للمحتوى) */
     .nav-menu {
-        position: fixed;
-        top: 65px;
-        left: -100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
-        height: calc(100vh - 65px);
+        max-height: 50vh; 
+        overflow-y: auto;
         background: var(--bg-dark);
         backdrop-filter: blur(20px);
         flex-direction: column;
         justify-content: flex-start;
-        padding: 30px 20px;
-        transition: left 0.3s ease-in-out;
-        border-top: 1px solid var(--border-subtle);
+        padding: 24px 20px;
+        transition: all 0.3s ease-in-out;
+        border-bottom: 1px solid var(--border-subtle);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.4);
         z-index: 999;
+        
+        /* Hidden state */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
     }
 
     body.light-mode .nav-menu {
@@ -693,22 +838,27 @@ body:not(.light-mode) .map-container iframe {
     }
 
     .nav-menu.active {
-        left: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     .nav-menu ul {
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
         width: 100%;
         text-align: center;
     }
 
     .nav-menu a {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .form-row {
         grid-template-columns: 1fr;
     }
-}
 
+    .split-map-box {
+        min-height: 300px;
+    }
+}
