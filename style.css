@@ -520,10 +520,32 @@ body.light-mode .navbar {
     margin-top: 4px;
 }
 
+/* Interactive Free Map Section Style */
+.map-section {
+    padding: 60px 0;
+    background-color: var(--bg-surface);
+}
+
+.map-container {
+    max-width: 1000px;
+    margin: 30px auto 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* تكييف الخريطة لتتناسب مع الوضع الليلي والنهاري بصرياً */
+body.light-mode .map-container iframe {
+    filter: none;
+}
+body:not(.light-mode) .map-container iframe {
+    filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
 /* FAQ Section */
 .faq-section {
     padding: 60px 0;
-    background-color: var(--bg-surface);
 }
 
 .faq-accordion {
