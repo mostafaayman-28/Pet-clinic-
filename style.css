@@ -1,4 +1,3 @@
-
 /* ==========================================================================
    Medical Clinical Dark Design System
    ========================================================================== */
@@ -708,83 +707,13 @@ body:not(.light-mode) .split-map-box iframe {
     filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
 
-/* Footer & Bottom Social Icons */
-.footer {
+/* Clean Footer */
+.footer-clean {
     background: var(--bg-dark);
     border-top: 1px solid var(--border-subtle);
-    padding-top: 50px;
-    color: var(--text-muted);
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 30px;
-    padding-bottom: 40px;
-}
-
-.footer-col h4 {
-    color: var(--text-primary);
-    margin-bottom: 12px;
-    font-size: 0.95rem;
-}
-
-.footer-col p, .footer-col ul li {
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-    margin-bottom: 6px;
-}
-
-.footer-col ul { list-style: none; }
-
-.legal-badge {
-    margin-top: 12px;
-    font-size: 0.7rem;
-    color: var(--primary-cyan);
-}
-
-.footer-bottom-social {
-    padding: 20px 0;
-    border-top: 1px solid var(--border-subtle);
+    padding: 25px 0;
     font-size: 0.8rem;
-}
-
-.social-bottom-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.bottom-social-icons {
-    display: flex;
-    gap: 12px;
-}
-
-.bottom-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-subtle);
-    border-radius: 50%;
-    color: var(--text-primary);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.social-svg-sm {
-    width: 18px;
-    height: 18px;
-}
-
-.bottom-icon:hover {
-    border-color: var(--primary-cyan);
-    transform: scale(1.1);
-    color: var(--primary-cyan);
+    color: var(--text-muted);
 }
 
 .float-emergency-btn {
@@ -804,7 +733,7 @@ body:not(.light-mode) .split-map-box iframe {
 
 /* Responsive Mobile Layout */
 @media (max-width: 992px) {
-    .hero-grid, .booking-grid, .footer-grid, .split-grid {
+    .hero-grid, .booking-grid, .split-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
