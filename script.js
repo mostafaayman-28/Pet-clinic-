@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // 0. Mobile Hamburger Menu Toggle
+    // Mobile Hamburger Menu Toggle
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -8,19 +8,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (hamburgerBtn && navMenu) {
         hamburgerBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            hamburgerBtn.classList.toggle('open');
         });
 
-        // Close menu when clicking any nav link
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
-                hamburgerBtn.classList.remove('open');
             });
         });
     }
 
-    // 0.1 Dark / Light Mode Toggle
+    // Dark / Light Mode Toggle
     const themeToggleBtn = document.getElementById('themeToggleBtn');
     const bodyElement = document.body;
 
@@ -44,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // 1. Phone Mask format for Brazil (45) 9XXXX-XXXX
+    // Phone Mask
     const phoneInput = document.getElementById('phone');
     if (phoneInput) {
         phoneInput.addEventListener('input', function (e) {
@@ -54,14 +51,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // 2. Prevent past dates selection in medical booking
+    // Min Date
     const dateInput = document.getElementById('preferredDate');
     if (dateInput) {
         const today = new Date().toISOString().split('T')[0];
         dateInput.setAttribute('min', today);
     }
 
-    // 3. Specialty Selection directly from Specialty Cards
+    // Specialty Selection
     const specButtons = document.querySelectorAll('.btn-select-spec');
     const specialtySelect = document.getElementById('specialty');
 
@@ -75,9 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // 4. Clinical Booking Payload & WhatsApp Integration
+    // Booking Form & WhatsApp
     const clinicalForm = document.getElementById('clinicalBookingForm');
-
     if (clinicalForm) {
         clinicalForm.addEventListener('submit', function (e) {
             e.preventDefault();
@@ -96,25 +92,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const whatsappNumber = "5545991317806";
 
-            const message = `🏥 *SOLICITAÇÃO DE CONSULTA MÉDICA - HOSPITAL AQUARIPET*\n` +
-                `-----------------------------------------------\n` +
+            const message = `🏥 *SOLICITAÇÃO DE CONSULTA - AQUARIPET*\n` +
+                `-----------------------------------\n` +
                 `👤 *Tutor:* ${ownerName}\n` +
                 `📞 *Contato:* ${phone}\n` +
                 `🐾 *Paciente:* ${petName} (${petSpecies})\n` +
                 `🩺 *Especialidade:* ${specialty}\n` +
-                `🚨 *Nível de Urgência:* ${urgencyLevel}\n` +
-                `📅 *Data Solicitada:* ${formattedDate}\n` +
+                `🚨 *Urgência:* ${urgencyLevel}\n` +
+                `📅 *Data:* ${formattedDate}\n` +
                 `⏰ *Horário:* ${preferredTime}\n` +
-                `📝 *Sintomas / Notas:* ${clinicalNotes}\n` +
-                `-----------------------------------------------\n` +
-                `_Aguardando confirmação de agenda médica._`;
+                `📝 *Notas:* ${clinicalNotes}\n` +
+                `-----------------------------------\n` +
+                `_Aguardando confirmação._`;
 
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
         });
     }
 
-    // 5. FAQ Accordion Behavior
+    // FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const header = item.querySelector('.faq-header');
