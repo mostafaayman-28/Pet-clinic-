@@ -1,10 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // 0. Dark / Light Mode Toggle
+    // 0. Mobile Hamburger Menu Toggle
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburgerBtn.classList.toggle('open');
+        });
+
+        // Close menu when clicking any nav link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburgerBtn.classList.remove('open');
+            });
+        });
+    }
+
+    // 0.1 Dark / Light Mode Toggle
     const themeToggleBtn = document.getElementById('themeToggleBtn');
     const bodyElement = document.body;
 
-    // Check for saved user preference in localStorage
     const savedTheme = localStorage.getItem('aquaripet_theme');
     if (savedTheme === 'light') {
         bodyElement.classList.add('light-mode');
@@ -52,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (specialtySelect) {
                 specialtySelect.value = selectedSpec;
             }
-            // Smooth Scroll to Agendamento
             document.getElementById('agendamento').scrollIntoView({ behavior: 'smooth' });
         });
     });
@@ -73,13 +91,11 @@ document.addEventListener('DOMContentLoaded', function () {
             const preferredTime = document.getElementById('preferredTime').value;
             const clinicalNotes = document.getElementById('clinicalNotes').value || 'Nenhuma observação prévia.';
 
-            // Format date to DD/MM/YYYY
             const rawDate = document.getElementById('preferredDate').value.split('-');
             const formattedDate = `${rawDate[2]}/${rawDate[1]}/${rawDate[0]}`;
 
-            const whatsappNumber = "5545991317806"; // Código 55 + DDD Toledo (45) + Número
+            const whatsappNumber = "5545991317806";
 
-            // Formal Clinical Message Payload in Portuguese
             const message = `🏥 *SOLICITAÇÃO DE CONSULTA MÉDICA - HOSPITAL AQUARIPET*\n` +
                 `-----------------------------------------------\n` +
                 `👤 *Tutor:* ${ownerName}\n` +
