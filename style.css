@@ -2,9 +2,9 @@
    Medical Clinical Dark Design System (Enterprise & High-Tech)
    ========================================================================== */
 :root {
-    --bg-dark: #090d16;
-    --bg-surface: #0f172a;
-    --bg-card: rgba(17, 24, 39, 0.75);
+    --bg-dark: #030306;
+    --bg-surface: #05060a;
+    --bg-card: rgba(6, 9, 14, 0.75);
     --primary-cyan: #06b6d4;
     --primary-cyan-hover: #0891b2;
     --accent-teal: #14b8a6;
@@ -22,6 +22,18 @@
     --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* الوضع النهاري (Light Mode) */
+body.light-mode {
+    --bg-dark: #f8fafc;
+    --bg-surface: #f1f5f9;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border-subtle: rgba(0, 0, 0, 0.1);
+    --border-glow: rgba(6, 182, 212, 0.3);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -34,6 +46,7 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -65,7 +78,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--text-primary);
+    color: #ffffff;
 }
 
 .pulse-red {
@@ -101,6 +114,11 @@ body {
     z-index: 1000;
     border-bottom: 1px solid var(--border-subtle);
     padding: 18px 0;
+    transition: background 0.3s ease;
+}
+
+body.light-mode .navbar {
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .navbar-content {
@@ -124,7 +142,7 @@ body {
     display: block;
     font-size: 1.3rem;
     font-weight: 800;
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: 0.5px;
 }
 
@@ -151,6 +169,33 @@ body {
 
 .nav-menu a:hover {
     color: var(--primary-cyan);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* زر تبديل الوضع */
+.theme-toggle-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.theme-toggle-btn:hover {
+    border-color: var(--primary-cyan);
+    transform: scale(1.05);
 }
 
 /* ==========================================================================
@@ -277,7 +322,7 @@ body {
     border: 1px solid var(--border-glow);
     border-radius: var(--radius-lg);
     padding: 36px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .card-header {
@@ -315,7 +360,7 @@ body {
 }
 
 .badge-list .tag {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--bg-surface);
     border: 1px solid var(--border-subtle);
     padding: 6px 14px;
     border-radius: 20px;
@@ -357,7 +402,7 @@ body {
 }
 
 .spec-card {
-    background: var(--bg-dark);
+    background: var(--bg-card);
     border: 1px solid var(--border-subtle);
     padding: 36px;
     border-radius: var(--radius-md);
@@ -400,7 +445,7 @@ body {
 }
 
 .btn-select-spec:hover {
-    color: #fff;
+    color: var(--text-primary);
 }
 
 /* ==========================================================================
@@ -439,6 +484,11 @@ body {
     margin-bottom: 6px;
 }
 
+.info-box-clinical p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
 .booking-form-container {
     background: var(--bg-surface);
     border: 1px solid var(--border-subtle);
@@ -461,10 +511,10 @@ body {
 .form-group input, .form-group select, .form-group textarea {
     width: 100%;
     padding: 14px 16px;
-    background: var(--bg-dark);
+    background: var(--bg-card);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
-    color: #fff;
+    color: var(--text-primary);
     font-size: 0.95rem;
     outline: none;
     transition: var(--transition);
@@ -503,7 +553,7 @@ body {
 }
 
 .faq-item {
-    background: var(--bg-dark);
+    background: var(--bg-card);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
     margin-bottom: 16px;
@@ -515,7 +565,7 @@ body {
     padding: 20px 24px;
     background: none;
     border: none;
-    color: #fff;
+    color: var(--text-primary);
     font-size: 1.05rem;
     font-weight: 700;
     display: flex;
@@ -523,6 +573,16 @@ body {
     align-items: center;
     cursor: pointer;
     text-align: left;
+}
+
+.faq-header .icon {
+    font-size: 1.4rem;
+    color: var(--primary-cyan);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-header .icon {
+    transform: rotate(45deg);
 }
 
 .faq-content {
@@ -539,7 +599,7 @@ body {
    Footer & Float Button
    ========================================================================== */
 .footer {
-    background: #040711;
+    background: var(--bg-dark);
     border-top: 1px solid var(--border-subtle);
     padding-top: 80px;
     color: var(--text-muted);
@@ -553,8 +613,12 @@ body {
 }
 
 .footer-col h4 {
-    color: #fff;
+    color: var(--text-primary);
     margin-bottom: 20px;
+}
+
+.footer-col p {
+    color: var(--text-secondary);
 }
 
 .footer-col ul {
@@ -563,6 +627,7 @@ body {
 
 .footer-col ul li {
     margin-bottom: 10px;
+    color: var(--text-secondary);
 }
 
 .legal-badge {
