@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -17,10 +16,10 @@
         <div class="container top-bar-content">
             <div class="emergency-info">
                 <span class="pulse-red"></span>
-                <span>🚨 PLANTÃO DE EMERGÊNCIA VETERINÁRIA <strong>24 HORAS</strong></span>
+                <span>🚨 PLANTÃO DE EMERGÊNCIA <strong>24 HORAS</strong></span>
             </div>
             <div class="emergency-contact">
-                <span>UTI & Centro Cirúrgico Pronto Atendimento</span>
+                <span>UTI & Pronto Atendimento</span>
                 <a href="tel:5545999999999" class="phone-link">📞 (45) 99999-9999</a>
             </div>
         </div>
@@ -36,19 +35,26 @@
                     <span class="brand-sub">HOSPITAL VETERINÁRIO</span>
                 </div>
             </a>
-            <nav class="nav-menu">
+            
+            <nav class="nav-menu" id="navMenu">
                 <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#especialidades">Especialidades</a></li>
-                    <li><a href="#estrutura">Estrutura</a></li>
-                    <li><a href="#corpo-medico">Corpo Médico</a></li>
-                    <li><a href="#faq">Dúvidas</a></li>
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#especialidades" class="nav-link">Especialidades</a></li>
+                    <li><a href="#estrutura" class="nav-link">Estrutura</a></li>
+                    <li><a href="#corpo-medico" class="nav-link">Corpo Médico</a></li>
+                    <li><a href="#faq" class="nav-link">Dúvidas</a></li>
                 </ul>
             </nav>
+
             <div class="nav-actions">
-                <!-- زر تبديل الوضع الليلي والنهاري -->
                 <button id="themeToggleBtn" class="theme-toggle-btn" title="Alternar Modo Claro/Escuro">🌙</button>
-                <a href="#agendamento" class="btn btn-primary">Agendar Consulta</a>
+                <a href="#agendamento" class="btn btn-primary desktop-cta">Agendar Consulta</a>
+                <!-- Mobile Hamburger Button -->
+                <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
@@ -64,9 +70,9 @@
                 <p>Estrutura hospitalar de ponta, diagnósticos por imagem em tempo real, UTI equipada e equipe médica especializada para cuidar da vida do seu paciente com máxima precisão.</p>
                 
                 <div class="hero-actions">
-                    <a href="#agendamento" class="btn btn-primary btn-lg">Agendar Consulta Médica</a>
+                    <a href="#agendamento" class="btn btn-primary btn-lg">Agendar Consulta</a>
                     <a href="https://wa.me/5545999999999?text=Emergência%20Veterinária" target="_blank" class="btn btn-emergency btn-lg">
-                        <span>Falar com Plantão 24h</span> ⚡
+                        <span>Plantão 24h</span> ⚡
                     </a>
                 </div>
 
@@ -78,12 +84,12 @@
                     <div class="metric-divider"></div>
                     <div class="metric-item">
                         <strong class="number">+12</strong>
-                        <span class="label">Especialidades Médicas</span>
+                        <span class="label">Especialidades</span>
                     </div>
                     <div class="metric-divider"></div>
                     <div class="metric-item">
                         <strong class="number">CRMV-PR</strong>
-                        <span class="label">Equipe Certificada</span>
+                        <span class="label">Certificada</span>
                     </div>
                 </div>
             </div>
@@ -243,11 +249,11 @@
 
                         <div class="form-group">
                             <label for="clinicalNotes">Sintomas ou Histórico Clínico (Opcional)</label>
-                            <textarea id="clinicalNotes" rows="3" placeholder="Descreva brevemente o motivo da consulta ou sintomas apresentados pelo paciente..."></textarea>
+                            <textarea id="clinicalNotes" rows="3" placeholder="Descreva brevemente o motivo da consulta..."></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-submit-clinical">
-                            <span>Solicitar Agendamento Clínico via WhatsApp</span>
+                            <span>Solicitar Agendamento via WhatsApp</span>
                             <span>🩺</span>
                         </button>
                     </form>
