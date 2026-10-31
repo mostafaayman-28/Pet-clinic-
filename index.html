@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQUARIPET | Hospital Veterinário & Centro Médico Especializado 24h</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Top Emergency Bar -->
+    <div class="top-emergency-bar">
+        <div class="container top-bar-content">
+            <div class="emergency-info">
+                <span class="pulse-red"></span>
+                <span>🚨 PLANTÃO DE EMERGÊNCIA VETERINÁRIA <strong>24 HORAS</strong></span>
+            </div>
+            <div class="emergency-contact">
+                <span>UTI & Centro Cirúrgico Pronto Atendimento</span>
+                <a href="tel:5545999999999" class="phone-link">📞 (45) 99999-9999</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container navbar-content">
+            <a href="#" class="logo">
+                <div class="logo-icon">🏥</div>
+                <div class="logo-text">
+                    <span class="brand-name">AQUARIPET</span>
+                    <span class="brand-sub">HOSPITAL VETERINÁRIO</span>
+                </div>
+            </a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#estrutura">Estrutura</a></li>
+                    <li><a href="#corpo-medico">Corpo Médico</a></li>
+                    <li><a href="#faq">Dúvidas</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="#agendamento" class="btn btn-primary">Agendar Consulta</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <div class="clinical-badge">
+                    <span>✨ Centro de Alta Complexidade Veterinária</span>
+                </div>
+                <h1>Medicina Veterinária Avançada e Atendimento Hospitalar 24h</h1>
+                <p>Estrutura hospitalar de ponta, diagnósticos por imagem em tempo real, UTI equipada e equipe médica especializada para cuidar da vida do seu paciente com máxima precisão.</p>
+                
+                <div class="hero-actions">
+                    <a href="#agendamento" class="btn btn-primary btn-lg">Agendar Consulta Médica</a>
+                    <a href="https://wa.me/5545999999999?text=Emergência%20Veterinária" target="_blank" class="btn btn-emergency btn-lg">
+                        <span>Falar com Plantão 24h</span> ⚡
+                    </a>
+                </div>
+
+                <div class="hero-metrics">
+                    <div class="metric-item">
+                        <strong class="number">24/7</strong>
+                        <span class="label">UTI & Internamento</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <strong class="number">+12</strong>
+                        <span class="label">Especialidades Médicas</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <strong class="number">CRMV-PR</strong>
+                        <span class="label">Equipe Certificada</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-card-display">
+                <div class="glass-card main-card">
+                    <div class="card-header">
+                        <span class="status-indicator online"></span>
+                        <span>Pronto Socorro Operacional</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Equipe Médica em Plantão</h3>
+                        <p>Anestesistas, Cirurgiões e Intensivistas de prontidão para casos de alta complexidade.</p>
+                        <div class="badge-list">
+                            <span class="tag">Raio-X Digital</span>
+                            <span class="tag">Ultrassom Doppler</span>
+                            <span class="tag">Laboratório 24h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties Grid -->
+    <section id="especialidades" class="specialties-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Corpo Clínico & Especialidades</span>
+                <h2>Cuidados Médicos Especializados</h2>
+                <p>Atendimento focado em diagnósticos precisos e tratamentos fundamentados na literatura científica internacional.</p>
+            </div>
+
+            <div class="specialties-grid">
+                
+                <div class="spec-card">
+                    <div class="spec-icon">🫀</div>
+                    <h3>Cardiologia Veterinária</h3>
+                    <p>Ecocardiograma com Doppler, Eletrocardiograma e acompanhamento cirúrgico especializado.</p>
+                    <button class="btn-select-spec" data-spec="Cardiologia Veterinária">Solicitar Consulta →</button>
+                </div>
+
+                <div class="spec-card">
+                    <div class="spec-icon">🦴</div>
+                    <h3>Ortopedia & Traumatologia</h3>
+                    <p>Tratamento de fraturas complexas, cirurgias ortopédicas e correção articular.</p>
+                    <button class="btn-select-spec" data-spec="Ortopedia e Traumatologia">Solicitar Consulta →</button>
+                </div>
+
+                <div class="spec-card">
+                    <div class="spec-icon">🩺</div>
+                    <h3>Clínica Médica Geral</h3>
+                    <p>Acompanhamento preventivo, medicina diagnóstica preventiva e check-ups completos.</p>
+                    <button class="btn-select-spec" data-spec="Clínica Médica Geral">Solicitar Consulta →</button>
+                </div>
+
+                <div class="spec-card">
+                    <div class="spec-icon">🔬</div>
+                    <h3>Diagnóstico por Imagem</h3>
+                    <p>Radiologia digital computadorizada e ultrassonografia abdominal de alta resolução.</p>
+                    <button class="btn-select-spec" data-spec="Diagnóstico por Imagem">Solicitar Consulta →</button>
+                </div>
+
+                <div class="spec-card">
+                    <div class="spec-icon">✂️</div>
+                    <h3>Centro Cirúrgico Avançado</h3>
+                    <p>Salas cirúrgicas equipadas com anestesia inalatória e monitoramento multiparamétrico.</p>
+                    <button class="btn-select-spec" data-spec="Cirurgia Geral e Avançada">Solicitar Consulta →</button>
+                </div>
+
+                <div class="spec-card">
+                    <div class="spec-icon">🛡️</div>
+                    <h3>UTI & Internamento 24h</h3>
+                    <p>Unidade de terapia intensiva com oxigenoterapia, monitoramento contínuo e bombas de infusão.</p>
+                    <button class="btn-select-spec" data-spec="Internamento e UTI 24h">Solicitar Consulta →</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical Booking & Triage Form -->
+    <section id="agendamento" class="booking-section">
+        <div class="container">
+            <div class="booking-grid">
+                <div class="booking-text">
+                    <span class="section-subtitle">Agendamento & Triagem</span>
+                    <h2>Agende a Consulta do seu Paciente</h2>
+                    <p>Preencha os dados do paciente para direcionarmos ao especialista adequado. Em caso de emergência imediata, contate diretamente nosso plantão.</p>
+
+                    <div class="info-box-clinical">
+                        <h4>ℹ️ Orientação ao Tutor:</h4>
+                        <p>Traga exames prévios, carteira de vacinação e histórico de medicamentos em uso na data da consulta.</p>
+                    </div>
+                </div>
+
+                <div class="booking-form-container">
+                    <form id="clinicalBookingForm">
+                        <div class="form-group">
+                            <label for="ownerName">Nome Completo do Tutor (a)</label>
+                            <input type="text" id="ownerName" placeholder="Ex: Dr. Roberto Alencar" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefone / WhatsApp</label>
+                                <input type="tel" id="phone" placeholder="(45) 99999-9999" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="petSpecies">Espécie do Paciente</label>
+                                <select id="petSpecies" required>
+                                    <option value="Canino (Cão)">Canino (Cão)</option>
+                                    <option value="Felino (Gato)">Felino (Gato)</option>
+                                    <option value="Silvestre / Exótico">Silvestre / Exótico</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="petName">Nome do Paciente</label>
+                                <input type="text" id="petName" placeholder="Ex: Thor, Mia" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="specialty">Especialidade Médica</label>
+                                <select id="specialty" required>
+                                    <option value="Clínica Médica Geral">Clínica Médica Geral</option>
+                                    <option value="Cardiologia Veterinária">Cardiologia Veterinária</option>
+                                    <option value="Ortopedia e Traumatologia">Ortopedia e Traumatologia</option>
+                                    <option value="Diagnóstico por Imagem">Diagnóstico por Imagem</option>
+                                    <option value="Cirurgia Geral e Avançada">Cirurgia Geral e Avançada</option>
+                                    <option value="Dermatologia Veterinária">Dermatologia Veterinária</option>
+                                    <option value="Oncologia Veterinária">Oncologia Veterinária</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="urgencyLevel">Nível de Urgência</label>
+                                <select id="urgencyLevel" required>
+                                    <option value="Consulta Eletiva / Rotina">Consulta Eletiva / Rotina</option>
+                                    <option value="Urgência Médica">Urgência Médica</option>
+                                    <option value="Emergência Imediata">Emergência Imediata 🚨</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="preferredDate">Data Preferida</label>
+                                <input type="date" id="preferredDate" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferredTime">Horário Preferido</label>
+                            <input type="time" id="preferredTime" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clinicalNotes">Sintomas ou Histórico Clínico (Opcional)</label>
+                            <textarea id="clinicalNotes" rows="3" placeholder="Descreva brevemente o motivo da consulta ou sintomas apresentados pelo paciente..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit-clinical">
+                            <span>Solicitar Agendamento Clínico via WhatsApp</span>
+                            <span>🩺</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Dúvidas Frequentes</span>
+                <h2>Informações Hospitalares</h2>
+            </div>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <span>Como funciona o atendimento de Emergência 24 Horas?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>O atendimento de emergência funciona em regime de plantão presencial contínuo. Pacientes graves passam por triagem médica imediata e são direcionados ao pronto atendimento ou UTI.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <span>É necessário jejum para exames de imagem e sangue?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Para ultrassonografia abdominal, recomenda-se jejum alimentar de 8 horas e hídrico de 2 horas. Para exames laboratoriais de rotina, o jejum médio recomendado é de 6 a 8 horas.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <span>Como é realizado o acompanhamento em casos cirúrgicos?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Todos os procedimentos cirúrgicos possuem acompanhamento exclusivo por médico veterinário anestesista dedicado, utilizando anestesia inalatória e monitorização multiparamétrica avançada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <div class="logo">
+                    <span class="logo-icon">🏥</span>
+                    <span class="brand-name">AQUARIPET</span>
+                </div>
+                <p>Hospital Veterinário & Centro Clínico Especializado de Alta Complexidade. Responsabilidade técnica e dedicação à vida animal.</p>
+                <div class="legal-badge">
+                    <span>CRMV-PR 10482 / Hospital Registrado</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Unidade Hospitalar</h4>
+                <p>📍 Av. Paranaense, 1500 - Centro</p>
+                <p>Toledo - PR | Brasil</p>
+                <p>📞 Plantão 24h: (45) 99999-9999</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Especialidades</h4>
+                <ul>
+                    <li>Cardiologia & Eletrocardiograma</li>
+                    <li>Ortopedia & Traumatologia</li>
+                    <li>Oncologia Veterinária</li>
+                    <li>Cirurgia Geral & Anestesia</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; 2026 AQUARIPET Hospital Veterinário 24h. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Emergency WhatsApp -->
+    <a href="https://wa.me/5545999999999?text=Emergência%20Veterinária" class="float-emergency-btn" target="_blank" title="Plantão de Emergência 24h">
+        <span>⚡ Plantão 24h</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
