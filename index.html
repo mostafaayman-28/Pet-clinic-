@@ -40,7 +40,7 @@
                 <ul>
                     <li><a href="#home" class="nav-link">Início</a></li>
                     <li><a href="#especialidades" class="nav-link">Especialidades</a></li>
-                    <li><a href="#localizacao" class="nav-link">Localização</a></li>
+                    <li><a href="#localizacao" class="nav-link">Localização & Contato</a></li>
                     <li><a href="#faq" class="nav-link">Dúvidas</a></li>
                 </ul>
             </nav>
@@ -257,25 +257,77 @@
         </div>
     </section>
 
-    <!-- Interactive Free Map Section (No API Key) -->
-    <section id="localizacao" class="map-section">
+    <!-- Split Section: Map & Contact Info (50% / 50%) -->
+    <section id="localizacao" class="location-split-section">
         <div class="container">
             <div class="section-header text-center">
-                <span class="section-subtitle">Localização & Unidade</span>
-                <h2>Venha nos Visitar</h2>
-                <p>Atendimento 24 horas na Av. Paranaense, 1500 - Centro, Toledo - PR.</p>
+                <span class="section-subtitle">Localização & Contato Direto</span>
+                <h2>Hospital Veterinário Aquaripet</h2>
+                <p>Estrutura completa aberta 24 horas por dia, 7 dias por semana, pronta para receber seu pet a qualquer momento.</p>
             </div>
-            <div class="map-container">
-                <!-- خريطة مجانية تفاعلية تماماً لـ Toledo - PR بدون API Key -->
-                <iframe 
-                    title="Mapa de Localização Aquaripet"
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=-53.7485%2C-24.7215%2C-53.7315%2C-24.7105&layer=mapnik&marker=-24.7160%2C-53.7400" 
-                    width="100%" 
-                    height="400" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
+
+            <div class="split-grid">
+                <!-- Left: Contact & Social Info -->
+                <div class="split-info-box">
+                    <h3>Canais de Atendimento Oficial</h3>
+                    <p class="info-desc">Entre em contato com nossa recepção hospitalar ou acesse nossas redes sociais para acompanhar casos clínicos, dicas de saúde e plantões:</p>
+                    
+                    <ul class="contact-list">
+                        <li>
+                            <span class="icon">📍</span>
+                            <div>
+                                <strong>Endereço:</strong>
+                                <p>Av. Paranaense, 1500 - Centro, Toledo - PR</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">📞</span>
+                            <div>
+                                <strong>Telefone Fixo / Recepção:</strong>
+                                <p><a href="tel:554533334444">(45) 3333-4444</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">📱</span>
+                            <div>
+                                <strong>WhatsApp Plantão 24h:</strong>
+                                <p><a href="https://wa.me/5545991317806" target="_blank">(45) 99131-7806</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">📧</span>
+                            <div>
+                                <strong>E-mail Institucional:</strong>
+                                <p>contato@aquaripetvet.com.br</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="social-links-box">
+                        <strong>Redes Sociais Oficiais:</strong>
+                        <div class="social-buttons">
+                            <a href="https://instagram.com/aquaripet" target="_blank" class="social-btn instagram">
+                                📷 Instagram (@aquaripet)
+                            </a>
+                            <a href="https://facebook.com/aquaripet" target="_blank" class="social-btn facebook">
+                                📘 Facebook (/aquaripetvet)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Free Interactive Map -->
+                <div class="split-map-box">
+                    <iframe 
+                        title="Mapa de Localização Aquaripet"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-53.7485%2C-24.7215%2C-53.7315%2C-24.7105&layer=mapnik&marker=-24.7160%2C-53.7400" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -311,7 +363,7 @@
         </div>
     </section>
 
-    <!-- Medical Footer -->
+    <!-- Medical Footer with Social Icons at the Bottom -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col brand-col">
@@ -326,7 +378,7 @@
             </div>
 
             <div class="footer-col">
-                <h4>Unidade Hospitalار</h4>
+                <h4>Unidade Hospitalar</h4>
                 <p>📍 Av. Paranaense, 1500 - Centro</p>
                 <p>Toledo - PR | Brasil</p>
                 <p>📞 Plantão 24h: (45) 99999-9999</p>
@@ -343,9 +395,14 @@
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <div class="container text-center">
+        <!-- Social Media Icons at the Very Bottom -->
+        <div class="footer-bottom-social">
+            <div class="container social-bottom-content">
                 <p>© 2026 AQUARIPET Hospital Veterinário 24h. Todos os direitos reservados.</p>
+                <div class="bottom-social-icons">
+                    <a href="https://instagram.com/aquaripet" target="_blank" title="Instagram" class="bottom-icon">📷</a>
+                    <a href="https://facebook.com/aquaripet" target="_blank" title="Facebook" class="bottom-icon">📘</a>
+                </div>
             </div>
         </div>
     </footer>
